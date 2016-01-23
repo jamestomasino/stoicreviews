@@ -1,22 +1,39 @@
 ---
 layout: default
+comments: true
 ---
 
-    <article id="main">
-  <header class="special container">
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<article id="main">
+	<header class="special container">
+		<h2 class="post-title">{{ page.title }}</h2>
+		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+	</header>
 
-  <section class="style4 wrapper container">
-    {{ content }}
-  </section>
-    
-    <footer>
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}" class="post-prev">&larr; Previous post</a> {% endif %}
-        {% if page.next %}
-        <a href="{{ page.next.url }}" class="post-next">Next post &rarr;</a> {% endif %}
-    </footer>
+	<section class="style4 wrapper container">
+		{{ content }}
+
+		{% if page.comments %}
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = 'stoicreviews'; // required: replace example with your forum shortname
+			var disqus_identifier = "{{ page.url }}";
+
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		{% endif %}
+
+	</section>
+	<footer>
+		{% if page.previous %}
+		<a href="{{ page.previous.url }}" class="post-prev">&larr; Previous post</a> {% endif %}
+		{% if page.next %}
+		<a href="{{ page.next.url }}" class="post-next">Next post &rarr;</a> {% endif %}
+	</footer>
 </article>
 
