@@ -15,13 +15,35 @@ tag_page_dir: tag
 tag_feed_layout: tag_feed
 tag_feed_dir: tag
 tag_permalink_style: pretty
-# Build settings
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  group_by: none
+  group_order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"# Build settings
 markdown: kramdown
 gems:
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
 - jekyll-feed
-- jekyll-scholar
-- jekyll-press
-- jekyll-tagging
+- jekyll/scholar
+- jekyll/tagging
