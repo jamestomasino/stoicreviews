@@ -10,9 +10,10 @@ comments: true
 	</header>
 
 	<section class="style4 wrapper container">
+
 		{{ content }}
 
-		{% include twitter.html %}
+		<p>{% include twitter.html %}</p>
 
 		{% if page.comments %}
 		<div id="disqus_thread"></div>

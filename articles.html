@@ -3,22 +3,30 @@ layout: default
 ---
 
 <article id="main">
-    <header class="special container">
-        <span class="icon fa-mobile"></span>
-        <h2><strong>Articles</strong></h2>
-    </header>
-    <section class="wrapper style4 container">
-        <ul class="posts">
-          {% for post in site.posts %}
-            <li class="wrapper {% if forloop.first %} style2 {% else %} style1 {% endif %}">
-              <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                {{ post.excerpt }}
-                <section class="special">
-                    <ul class="buttons">
-                        <li><a href="{{ post.url }}" class="button">Read more</a></li>
-                    </ul></section>
-            </li>
-          {% endfor %}
-        </ul>
-    </section>
+	<header class="special container">
+		<span class="icon fa-mobile"></span>
+		<h2><strong>Articles</strong></h2>
+	</header>
+	<section class="wrapper style4 container">
+		<ul class="posts">
+			{% for post in site.posts %}
+			<li class="wrapper {% if forloop.first %} style2 {% else %} style1 {% endif %}">
+				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				</p>
+				{{ post.excerpt }}
+				<section class="special">
+					<ul class="buttons">
+						<li><a href="{{ post.url }}" class="button">
+							{% capture words %}
+							{{ post.content | number_of_words | minus: 180 }}
+							{% endcapture %}
+							{% unless words contains "-" %}
+							{{ words | plus: 180 | divided_by: 180 | append: " minute read" }}
+							{% endunless %}
+						</a></li>
+					</ul></section>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
 </article>
