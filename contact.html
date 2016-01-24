@@ -12,7 +12,6 @@ layout: contact
 				<header class="special container">
 					<span class="icon fa-envelope"></span>
 					<h2>Speak your mind</h2>
-					<p>and have the consolation that no one will ever read a word, including me.</p>
 				</header>
 					
 				<!-- One -->
@@ -20,18 +19,18 @@ layout: contact
 					
 						<!-- Content -->
 							<div class="content">
-								<form>
+								<form action="//formspree.io/stoicreviews@jamestomasino.com" method="POST">
 									<div class="row half collapse-at-2">
 										<div class="6u">
 											<input type="text" name="name" placeholder="Name" />
 										</div>
 										<div class="6u">
-											<input type="text" name="email" placeholder="Email" />
+											<input type="email" name="_replyto" placeholder="Email" />
 										</div>
 									</div>
 									<div class="row half">
 										<div class="12u">
-											<input type="text" name="subject" placeholder="Subject" />
+											<input type="text" name="_subject" placeholder="Subject" />
 										</div>
 									</div>
 									<div class="row half">
@@ -42,6 +41,7 @@ layout: contact
 									<div class="row">
 										<div class="12u">
 											<ul class="buttons">
+												<input type="text" name="_gotcha" style="display:none" />
 												<li><input type="submit" class="special" value="Send Message" /></li>
 											</ul>
 										</div>
