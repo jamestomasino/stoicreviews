@@ -1,3 +1,4 @@
 #!/bin/sh
+jekyll build
 ssh tomasino rm -rf /var/www/stoicreviews.com/*
 scp -r _site/. tomasino:/var/www/stoicreviews.com/
