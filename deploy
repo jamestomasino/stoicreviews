@@ -1,4 +1,7 @@
 #!/bin/sh
-jekyll build
-ssh tomasino rm -rf /var/www/stoicreviews.com/*
-scp -r _site/. tomasino:/var/www/stoicreviews.com/
+if jekyll build; then
+	ssh tomasino rm -rf /var/www/stoicreviews.com/*
+	scp -r _site/. tomasino:/var/www/stoicreviews.com/
+else
+    echo "Failed to build site. Aborting"
+fi
