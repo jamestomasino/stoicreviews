@@ -12,6 +12,8 @@ comments: true
 	<section class="style4 wrapper container">
 		{{ content }}
 
+		{% include twitter.html %}
+
 		{% if page.comments %}
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
