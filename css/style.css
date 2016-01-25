@@ -270,7 +270,8 @@
 			margin: 0 0 2em 0;
 		}
 
-			.image.featured img {
+			.image.featured img,
+			img.image.featured {
 				display: block;
 				width: 100%;
 			}

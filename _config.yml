@@ -43,6 +43,25 @@ scholar:
 
   query: "@*"# Build settings
 markdown: kramdown
+picture:
+  source: images
+  output: generated
+  markup: picture
+  presets:
+    default:
+      ppi: [1, 1.5, 2]
+      attr:
+        class: image featured
+        itemprop: image
+      source_lrg:
+        media: "(min-width: 40em)"
+        width: 1024
+      source_med:
+        media: "(min-width: 30em)"
+        width: 473
+      source_default:
+        width: 473
+        height: 209
 gems:
 - jemoji
 - jekyll-redirect-from
@@ -50,3 +69,4 @@ gems:
 - jekyll-feed
 - jekyll/scholar
 - jekyll/tagging
+- jekyll-picture-tag

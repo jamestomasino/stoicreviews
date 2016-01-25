@@ -2,8 +2,9 @@
 layout: post
 title:  "Living Well"
 category: "misc"
+description: "What does stoicism teach us about living a fulfilling life and how do we put it into practice?"
 ---
-<span class="image featured"><img src="/images/pic02.jpg" alt=""></span>
+{% picture pic01.jpg %}
 
 Once upon a time...
 
