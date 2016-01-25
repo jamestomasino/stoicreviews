@@ -8,6 +8,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
 permalink: /articles/:categories/:title
+paginate: 5
+paginate_path: "/articles/page:num/"
 url: "http://stoicreviews.com" # the base hostname & protocol for your site
 twitter_username: mr_ino
 github_username:  jamestomasino
