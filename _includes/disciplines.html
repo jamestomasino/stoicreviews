@@ -1,49 +1,20 @@
 	<section class="wrapper style1 container special">
 		<div class="row">
 
+		{% for discipline in site.data.disciplines %}
 			<div class="4u">
-
 				<section>
-					<span class="icon featured fa-globe"></span>
+					<span class="icon featured {% discipline.icon %}"></span>
 					<header>
-						<h3>Physics</h3>
+						<h3>{% discipline.name %}</h3>
 					</header>
-					<p>We study the natural world and our relationships to understand how
-					our universe works. Some things are within our control, other things
-					are beyond us. Where do we focus our energy to be most effective?</p>
-					<a href="/physics" class="button">Acceptance</a>
+					<p>{% discipline.blurb %}</p>
+					<a href="{% discipline.page %}" class="button">{% discipline.cta %}</a>
 				</section>
 
 			</div>
-			<div class="4u">
+		{% endfor %}
 
-				<section>
-					<span class="icon featured fa-check"></span>
-					<header>
-						<h3>Ethics</h3>
-					</header>
-					<p>What is the best way to live? Do we spend our days searching for
-					pleasure or to avoid pain, or for a higher purpose? What is best for
-					human flourishing? What is best for all of us? What can you
-					contribute?</p>
-					<a href="/ethics" class="button">Philanthropy</a>
-				</section>
-
-			</div>
-			<div class="4u">
-
-				<section>
-					<span class="icon featured fa-link"></span>
-					<header>
-						<h3>Logic</h3>
-					</header>
-					<p>We are thinking, reasoning creatures. Armed as we are with the
-					knowledge of the ages, pristine education, and access to information
-					on a whim, our lives are well served by turning that eye inward.</p>
-					<a href="/logic" class="button">Mindfulness</a>
-				</section>
-
-			</div>
 		</div>
 	</section>
 
