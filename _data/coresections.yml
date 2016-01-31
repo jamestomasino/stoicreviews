@@ -1,0 +1,19 @@
+- name: About Stoicism
+  page: /about-stoicism
+  pic: about-stoicism.jpg
+  blurb: Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit.
+
+- name: About Stoic Reviews
+  page: /about-stoicreviews
+  pic: about-stoicreviews.jpg
+  blurb: Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit.
+
+- name: Techniques
+  page: /techniques
+  pic: techniques.jpg
+  blurb: Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit.
+
+- name: Resources
+  page: /resources
+  pic: resources.jpg
+  blurb: Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit.

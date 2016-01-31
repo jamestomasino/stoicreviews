@@ -17,58 +17,7 @@ layout: left
 				<div class="4u">
 
 					<!-- Sidebar -->
-						<div class="sidebar">
-							<section>
-								<header>
-									<h3>About Stoicism</h3>
-								</header>
-								<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="/about-stoicism" class="button small">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-							<section>
-								<a href="/about-stoicreviews" class="image featured">{% picture about-stoicreviews.jpg %}</a>
-								<header>
-									<h3>About Stoic Reviews</h3>
-								</header>
-								<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="/about-stoicreviews" class="button small">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-							<section>
-								<a href="/resources" class="image featured">{% picture techniques.jpg %}</a>
-								<header>
-									<h3>Techniques</h3>
-								</header>
-								<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="/techniques" class="button small">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-							<section>
-								<a href="/resources" class="image featured">{% picture resources.jpg %}</a>
-								<header>
-									<h3>Resources</h3>
-								</header>
-								<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="/resources" class="button small">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-						</div>
+					{% include sidebar.html %}
 
 				</div>
 				<div class="8u skel-cell-important">
@@ -90,63 +39,7 @@ layout: left
 
 		</section>
 
-	<!-- Two -->
-		<section class="wrapper style1 container special">
-			<div class="row">
-				<div class="4u">
-
-					<section>
-						<header>
-							<h3>Physics</h3>
-						</header>
-						<p>We study the natural world and our relationships to
-						understand how our universe works. Some things we can
-						control, other things are beyond us. In that way we focus our
-						energy appropriately, where we can be effective.</p>
-						<footer>
-							<ul class="buttons">
-								<li><a href="/physics" class="button small">Learn More</a></li>
-							</ul>
-						</footer>
-					</section>
-
-				</div>
-				<div class="4u">
-
-					<section>
-						<header>
-							<h3>Ethics</h3>
-						</header>
-						<p>The stoic is always trying to determine the best way to
-						live. What is best for human flourishing? What is best for
-						all of us? What can you contribute?</p>
-						<footer>
-							<ul class="buttons">
-								<li><a href="/ethics" class="button small">Learn More</a></li>
-							</ul>
-						</footer>
-					</section>
-
-				</div>
-				<div class="4u">
-
-					<section>
-						<header>
-							<h3>Logic</h3>
-						</header>
-						<p>We are thinking, reasoning creatures. Armed as we are with
-						the knowledge of the ages, pristine education, and access to
-						information on a whim, our lives are well served by turning
-						that eye inward.</p>
-						<footer>
-							<ul class="buttons">
-								<li><a href="/logic" class="button small">Learn More</a></li>
-							</ul>
-						</footer>
-					</section>
-
-				</div>
-			</div>
-		</section>
+		<!-- Two -->
+		{% include disciplines.html %}
 
 </article>
