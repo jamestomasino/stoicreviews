@@ -4,12 +4,12 @@
 		{% for discipline in site.data.disciplines %}
 			<div class="4u">
 				<section>
-					<span class="icon featured {% discipline.icon %}"></span>
+					<span class="icon featured {{ discipline.icon }}"></span>
 					<header>
-						<h3>{% discipline.name %}</h3>
+						<h3>{{ discipline.name }}</h3>
 					</header>
-					<p>{% discipline.blurb %}</p>
-					<a href="{% discipline.page %}" class="button">{% discipline.cta %}</a>
+					<p>{{ discipline.blurb }}</p>
+					<a href="{{ discipline.page }}" class="button">{{ discipline.cta }}</a>
 				</section>
 
 			</div>

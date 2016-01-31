@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	{% for d in site.data.disciplines %}
+		{% capture longpage %}{{ d.page }}/index.html{% endcapture %}
+		{% if longpage == page.url %}
+			{% assign data = d %}
+		{% endif %}
+	{% endfor %}
+	<body class="left-sidebar">
+
+		{% include header.html %}
+		<div class="page-content">
+			<article id="main">
+
+				<header class="special container">
+					<span class="icon {{ data.icon }}"></span>
+					<h2><strong>{{ data.name }}</strong></h2>
+					<p>Taking us toward the discipline of <strong>{{ data.cta }}</strong></p>
+				</header>
+
+				<section class="wrapper style4 container">
+
+					<div class="row oneandhalf">
+						<div class="4u">
+
+							<!-- Sidebar -->
+							{% include sidebar.html %}
+
+						</div>
+						<div class="8u skel-cell-important">
+
+							<!-- Content -->
+							<div class="content">
+								<section>
+									<a href="#" class="image featured">{% picture {{ data.img }} %}</a>
+									<header>
+										<h3>{{ data.name }}</h3>
+									</header>
+									{{ content }}
+								</section>
+							</div>
+
+						</div>
+
+				</section>
+
+				<!-- Two -->
+				{% include disciplines.html %}
+			</article>
+					</div>
+					{% include footer.html %}
+					{% include google_analytics.html %}
+	</body>
+
+</html>

@@ -56,66 +56,24 @@ layout: landing-page
 				that people will find irresistable.</h2>
 		</header>
 
-		<div class="row">
-			<div class="6u">
-
-				<section>
-					<a href="/about-stoicism" class="image featured">{% picture about-stoicism.jpg %}</a>
-					<header>
-						<h3>About Stoicism</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat commodo suscipit amet
-					sed nibh. Proin a ullamcorper sed blandit. Sed tristique
-					purus vitae volutpat commodo suscipit ullamcorper sed blandit
-					lorem ipsum dolore.</p>
-				</section>
-
-			</div>
-			<div class="6u">
-
-				<section class="special">
-					<a href="/about-stoicreviews" class="image featured">{% picture about-stoicreviews.jpg %}</a>
-					<header>
-						<h3>About Stoic Reviews</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat commodo suscipit amet
-					sed nibh. Proin a ullamcorper sed blandit. Sed tristique
-					purus vitae volutpat commodo suscipit ullamcorper sed blandit
-					lorem ipsum dolore.</p>
-				</section>
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="6u">
-
-				<section>
-					<a href="/techniques" class="image featured">{% picture techniques.jpg %}</a>
-					<header>
-						<h3>Techniques</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat commodo suscipit amet
-					sed nibh. Proin a ullamcorper sed blandit. Sed tristique
-					purus vitae volutpat commodo suscipit ullamcorper sed blandit
-					lorem ipsum dolore.</p>
-				</section>
-
-			</div>
-			<div class="6u">
-
-				<section>
-					<a href="/resources" class="image featured">{% picture resources.jpg %}</a>
-					<header>
-						<h3>Resources</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat commodo suscipit amet
-					sed nibh. Proin a ullamcorper sed blandit. Sed tristique
-					purus vitae volutpat commodo suscipit ullamcorper sed blandit
-					lorem ipsum dolore.</p>
-				</section>
-
-			</div>
-		</div>
+		{% for section in site.data.coresections %}
+			{% assign loopindex = forloop.index | modulo: 2 %}
+				{% if loopindex == 1 %}
+				<div class="row">
+				{% endif %}
+					<div class="6u">
+						<section>
+							<a href="{{ section.page }}" class="image featured">{% picture {{ section.pic }} %}</a>
+							<header>
+								<h3>{{ section.name }}</h3>
+							</header>
+							<p>{{ section.blurb }}</p>
+						</section>
+					</div>
+				{% if loopindex == 0 %}
+				</div>
+				{% endif %}
+		{% endfor %}
 
 		<footer class="major">
 			<ul class="buttons">

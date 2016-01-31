@@ -1,17 +1,20 @@
 - name: Physics
   icon: fa-globe
+  img: physics.jpg
   page: /physics
   blurb: We study the natural world and our relationships to understand how our universe works. Some things are within our control, other things are beyond us. Where do we focus our energy to be most effective?
   cta: Acceptance
 
 - name: Ethics
   icon: fa-check
+  img: ethics.jpg
   page: /ethics
   blurb: What is the best way to live? Do we spend our days searching for pleasure or to avoid pain, or for a higher purpose? What is best for human flourishing? What is best for all of us? What can you contribute?
   cta: Philanthropy
 
 - name: Logic
   icon: fa-link
+  img: logic.jpg
   page: /logic
   blurb: We are thinking, reasoning creatures. Armed as we are with the knowledge of the ages, pristine education, and access to information on a whim, our lives are well served by turning that eye inward.
   cta: Mindfulness
