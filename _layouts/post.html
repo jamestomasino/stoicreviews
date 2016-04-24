@@ -4,12 +4,16 @@ comments: true
 ---
 
 <article id="main">
+	<meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
+	<meta itemprop="description" content="{{ content | strip_html | truncatewords: 40 }}" />
 	<header class="special container">
-		<h2 class="post-title">{{ page.title }}</h2>
-		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+		<h2 itemprop="name" class="post-title">{{ page.title }}</h2>
+		<time class="published" itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+			{{ page.date | date: "%B %e, %Y" }}
+		</time>
 	</header>
 
-	<section class="style4 wrapper container">
+	<section class="style4 wrapper container" itemprop="articleBody">
 
 		{{ content }}
 
