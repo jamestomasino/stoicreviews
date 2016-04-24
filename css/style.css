@@ -1111,3 +1111,7 @@
 			margin-left: 75px;
 			position: relative;
 		}
+
+		.bibliography i {
+			font-style: italic;
+		}

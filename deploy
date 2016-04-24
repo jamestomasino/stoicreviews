@@ -1,5 +1,5 @@
 #!/bin/sh
-if jekyll build; then
+if bundle exec jekyll build; then
 	ssh tomasino rm -rf /var/www/stoicreviews.com/*
 	scp -r _site/. tomasino:/var/www/stoicreviews.com/
 else
