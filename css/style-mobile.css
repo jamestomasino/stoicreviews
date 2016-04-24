@@ -155,7 +155,8 @@
 		padding: 2.5em 0 0 0;
 	}
 
-	body.contact #main {
+	body.contact #main,
+	body.search #main {
 		padding-bottom: 0;
 	}
 
