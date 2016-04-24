@@ -1,13 +1,8 @@
 ---
 ---
-<abbr>[{{key}}]</abbr><!--[{{type}}]-->{{reference}}
 
-{% if entry.abstract %}
-<p>{{ entry.abstract }}</p>
+{% if entry.note %}
+<a class="type" href="{{ entry.note }}">[{{type}}]</a><span class="ref">{{reference}}</span>
+{% else %}
+<span class="type">[{{type}}]</span><span class="ref">{{reference}}</span>
 {% endif %}
-
-{% if entry.url %}
-<a href="{{ entry.url }}">[buy]</a>
-{% endif %}
-
-<pre>{{ entry.bibtex }}</pre>
