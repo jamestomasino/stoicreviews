@@ -1087,3 +1087,27 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+	.references {
+		border-top: solid 1px rgba(124, 128, 129, 0.2);
+		margin: 3em 0 0 0;
+		padding: 3em 0 0 0;
+	}
+
+		.bibliography li {
+			margin-bottom: 25px;
+		}
+
+		.bibliography .type {
+			float: left;
+			position: relative;
+			display: block;
+			text-transform: capitalize;
+			margin-right: 10px;
+		}
+		
+		.bibliography .ref {
+			display: block;
+			margin-left: 75px;
+			position: relative;
+		}

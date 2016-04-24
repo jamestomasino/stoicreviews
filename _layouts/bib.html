@@ -2,7 +2,7 @@
 ---
 
 {% if entry.note %}
-<a class="type" href="{{ entry.note }}">[{{type}}]</a><span class="ref">{{reference}}</span>
+<span class="type">[<a href="{{ entry.note }}">{{type}}</a>]</span><span class="ref">{{reference}}</span>
 {% else %}
 <span class="type">[{{type}}]</span><span class="ref">{{reference}}</span>
 {% endif %}
