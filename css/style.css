@@ -1105,7 +1105,7 @@
 			text-transform: capitalize;
 			margin-right: 10px;
 		}
-		
+
 		.bibliography .ref {
 			display: block;
 			margin-left: 75px;
@@ -1114,4 +1114,14 @@
 
 		.bibliography i {
 			font-style: italic;
+		}
+
+	em {
+		display: inline-block;
+		background-color: aliceblue;
+		padding: 0 5px 0 5px;
+	}
+
+		a em, em a {
+			color: inherit;
 		}
