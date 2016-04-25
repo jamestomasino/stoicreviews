@@ -46,17 +46,51 @@ picture:
     default:
       ppi: [1, 1.5, 2]
       attr:
-        class: image featured
+        class: image
         itemprop: image
-      source_lrg:
+      source_wide:
         media: "(min-width: 40em)"
         width: 1024
-      source_med:
+      source_normal:
         media: "(min-width: 30em)"
         width: 473
       source_default:
         width: 473
         height: 209
+    sidepic:
+      ppi: [1, 1.5, 2]
+      attr:
+        class: image
+        itemprop: image
+      source_wide:
+        media: "(min-width: 40em)"
+        width: 280
+      source_normal:
+        media: "(min-width: 30em)"
+        width: 280
+      source_narrow:
+        width: 200
+      source_narrower:
+        width: 150
+      source_mobile:
+        width: 100
+      source_default:
+        width: 280
+    feature:
+      ppi: [1, 1.5, 2]
+      attr:
+        class: image featured
+        itemprop: image
+      source_wide:
+        media: "(min-width: 40em)"
+        width: 1024
+      source_normal:
+        media: "(min-width: 30em)"
+        width: 473
+      source_default:
+        width: 473
+        height: 209
+# wide normal narrow narrower mobile
 gems:
 - jekyll-redirect-from
 - jekyll-sitemap
