@@ -44,21 +44,29 @@ picture:
   markup: picture
   presets:
     default:
-      ppi: [1, 1.5, 2]
+      ppi: [1]
       attr:
         class: image
         itemprop: image
       source_wide:
         media: "(min-width: 1280px)"
-        width: 1024
+        width: 860
       source_normal:
         media: "(min-width: 980px)"
-        width: 473
+        width: 750
+      source_narrow:
+        media: "(min-width: 840px)"
+        width: 700
+      source_narrower:
+        media: "(min-width: 736px)"
+        width: 610
+      source_mobile:
+        media: "(min-width: 0)"
+        width: 610
       source_default:
-        width: 473
-        height: 209
+        width: 860
     post:
-      ppi: [1, 1.5, 2]
+      ppi: [1]
       attr:
         class: image postimage
         itemprop: image
@@ -75,18 +83,15 @@ picture:
         media: "(min-width: 736px)"
         width: 610
       source_mobile:
-        media: "(max-width: 735px)"
+        media: "(min-width: 0)"
         width: 610
       source_default:
         width: 860
     sidepic:
-      ppi: [1, 1.5, 2]
+      ppi: [1]
       attr:
         class: image
         itemprop: image
-      source_wide:
-        media: "(min-width: 1280px)"
-        width: 280
       source_normal:
         media: "(min-width: 980px)"
         width: 280
@@ -97,25 +102,27 @@ picture:
         media: "(min-width: 736px)"
         width: 150
       source_mobile:
-        media: "(max-width: 735px)"
+        media: "(min-width: 0)"
         width: 100
       source_default:
         width: 280
-    feature:
-      ppi: [1, 1.5, 2]
+    section:
+      ppi: [1]
       attr:
-        class: image featured
+        class: image sectionimage
         itemprop: image
-      source_wide:
-        media: "(min-width: 1280px)"
-        width: 1024
-      source_normal:
-        media: "(min-width: 980px)"
+      source_narrow:
+        media: "(min-width: 840px)"
+        width: 473
+      source_narrower:
+        media: "(min-width: 736px)"
+        width: 697
+      source_mobile:
+        media: "(min-width: 0)"
         width: 473
       source_default:
         width: 473
-        height: 209
-# wide normal narrow narrower mobile
+
 gems:
 - jekyll-redirect-from
 - jekyll-sitemap
