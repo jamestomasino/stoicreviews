@@ -3,6 +3,50 @@ s3_secret: Ij/WBnzHyjG3vdc1ltHyeyyZAKpS3Vl+WXLvmgF/
 s3_bucket: stoicreviews.com
 cloudfront_distribution_id: E3NXQH413P5AX0
 
+max_age:
+  "images/*": <%= 24 * 60 * 60 %>
+  "generated/*": <%= 24 * 60 * 60 %>
+  "css/images/*": <%= 24 * 60 * 60 %>
+  "js/*": <%= 1 * 60 * 60 %>
+  "css/*": <%= 1 * 60 * 60 %>
+  "fonts/*": <%= 1 * 60 * 60 %>
+  "*": <%= 5 * 60 %>
+
+gzip: true
+gzip:
+  - .css
+  - .js
+  - .svg
+  - .html
+  - .map
+
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: <%= 60 * 60 * 12 %>
+
+index_document: index.html
+error_document: 404.html
+
+exclude_from_upload:
+  - .bundle
+  - .git
+  - bin
+  - sass
+  - vendor
+  - .gitignore
+  - .ruby-version
+  - config.rb
+  - Gemfile
+  - Gemfile.lock
+  - gumby.json
+  - s3_website.yml
+  - .DS_Store
+  - LICENSE.txt
+  - config.yml
+  - serve
+  - deploy
+
+
 # Below are examples of all the available configurations.
 # See README for more detailed info on each of them.
 
@@ -11,41 +55,60 @@ cloudfront_distribution_id: E3NXQH413P5AX0
 # index_document: index.html
 # error_document: error.html
 
-# max_age:
-#   "assets/*": 6000
-#   "*": 300
+#cache_control: public, no-transform, max-age=1200, s-maxage=1200
+#cloudfront_invalidate_root: true
+#concurrency_level: 5
 
-# gzip:
-#   - .html
-#   - .css
-#   - .md
-# gzip_zopfli: true
+#cache_control:
+#  "assets/*": public, max-age=3600
+#  "*": no-cache, no-store
 
-# See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
-# s3_endpoint: ap-northeast-1
 
-# ignore_on_server: that_folder_of_stuff_i_dont_keep_locally
 
-# exclude_from_upload:
-#   - those_folders_of_stuff
-#   - i_wouldnt_want_to_upload
-
-# s3_reduced_redundancy: true
-
-# cloudfront_distribution_id: your-dist-id
-
-# cloudfront_distribution_config:
-#   default_cache_behavior:
-#     min_TTL: <%= 60 * 60 * 24 %>
-#   aliases:
-#     quantity: 1
-#     items:
-#       CNAME: your.website.com
-
-# cloudfront_invalidate_root: true
-
-# concurrency_level: 5
-
+# CSS
+#     ExpiresByType text/css                              "access plus 1 year"
+# 
+#   # Data interchange
+#     ExpiresByType application/json                      "access plus 0 seconds"
+#     ExpiresByType application/xml                       "access plus 0 seconds"
+#     ExpiresByType text/xml                              "access plus 0 seconds"
+# 
+#   # Favicon (cannot be renamed!) and cursor images
+#     ExpiresByType image/x-icon                          "access plus 1 week"
+# 
+#   # HTML components (HTCs)
+#     ExpiresByType text/x-component                      "access plus 1 month"
+# 
+#   # HTML
+#     ExpiresByType text/html                             "access plus 1 week"
+# 
+#   # JavaScript
+#     ExpiresByType application/javascript                "access plus 1 year"
+# 
+#   # Manifest files
+#     ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+#     ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+# 
+#   # Media
+#     ExpiresByType audio/ogg                             "access plus 1 year"
+#     ExpiresByType video/mp4                             "access plus 1 year"
+#     ExpiresByType video/ogg                             "access plus 1 year"
+#     ExpiresByType video/webm                            "access plus 1 year"
+#     ExpiresByType image/gif                             "access plus 1 year"
+#     ExpiresByType image/jpeg                            "access plus 1 year"
+#     ExpiresByType image/jpg                             "access plus 1 year"
+#     ExpiresByType image/png                             "access plus 1 year"
+# 
+#   # Web feeds
+#     ExpiresByType application/atom+xml                  "access plus 1 hour"
+#     ExpiresByType application/rss+xml                   "access plus 1 hour"
+# 
+#   # Web fonts
+#     ExpiresByType application/font-woff                 "access plus 1 month"
+#     ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+#     ExpiresByType application/x-font-ttf                "access plus 1 month"
+#     ExpiresByType font/opentype                         "access plus 1 month"
+#     ExpiresByType image/svg+xml                         "access plus 1 month"
 # redirects:
 #   index.php: /
 #   about.php: about.html
