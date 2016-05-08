@@ -241,17 +241,6 @@
 		position: relative;
 	}
 
-		.image:before {
-			/*background: url("images/overlay.png");*/
-			content: '';
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
-
 		.image.fit {
 			display: block;
 		}
@@ -268,6 +257,16 @@
 
 			.image.featured img,
 			img.image.featured {
+				display: block;
+				width: 100%;
+			}
+
+		.image.postimage {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+			.image.postimage img,
+			img.image.postimage {
 				display: block;
 				width: 100%;
 			}
@@ -869,10 +868,6 @@
 
 		#main > :last-child {
 			margin-bottom: 0;
-		}
-
-		#main .sidebar {
-			color: #AAA;
 		}
 
 		#main .sidebar section {

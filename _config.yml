@@ -49,24 +49,37 @@ picture:
         class: image
         itemprop: image
       source_wide:
-        media: "(min-width: 40em)"
         width: 1024
       source_normal:
-        media: "(min-width: 30em)"
         width: 473
       source_default:
         width: 473
         height: 209
+    post:
+      ppi: [1, 1.5, 2]
+      attr:
+        class: image postimage
+        itemprop: image
+      source_wide:
+        width: 860
+      source_normal:
+        width: 750
+      source_narrow:
+        width: 700
+      source_narrower:
+        width: 610
+      source_mobile:
+        width: 610
+      source_default:
+        width: 860
     sidepic:
       ppi: [1, 1.5, 2]
       attr:
         class: image
         itemprop: image
       source_wide:
-        media: "(min-width: 40em)"
         width: 280
       source_normal:
-        media: "(min-width: 30em)"
         width: 280
       source_narrow:
         width: 200
@@ -82,10 +95,8 @@ picture:
         class: image featured
         itemprop: image
       source_wide:
-        media: "(min-width: 40em)"
         width: 1024
       source_normal:
-        media: "(min-width: 30em)"
         width: 473
       source_default:
         width: 473
