@@ -49,8 +49,10 @@ picture:
         class: image
         itemprop: image
       source_wide:
+        media: "(min-width: 1280px)"
         width: 1024
       source_normal:
+        media: "(min-width: 980px)"
         width: 473
       source_default:
         width: 473
@@ -61,14 +63,19 @@ picture:
         class: image postimage
         itemprop: image
       source_wide:
+        media: "(min-width: 1280px)"
         width: 860
       source_normal:
+        media: "(min-width: 980px)"
         width: 750
       source_narrow:
+        media: "(min-width: 840px)"
         width: 700
       source_narrower:
+        media: "(min-width: 736px)"
         width: 610
       source_mobile:
+        media: "(max-width: 735px)"
         width: 610
       source_default:
         width: 860
@@ -78,14 +85,19 @@ picture:
         class: image
         itemprop: image
       source_wide:
+        media: "(min-width: 1280px)"
         width: 280
       source_normal:
+        media: "(min-width: 980px)"
         width: 280
       source_narrow:
+        media: "(min-width: 840px)"
         width: 200
       source_narrower:
+        media: "(min-width: 736px)"
         width: 150
       source_mobile:
+        media: "(max-width: 735px)"
         width: 100
       source_default:
         width: 280
@@ -95,8 +107,10 @@ picture:
         class: image featured
         itemprop: image
       source_wide:
+        media: "(min-width: 1280px)"
         width: 1024
       source_normal:
+        media: "(min-width: 980px)"
         width: 473
       source_default:
         width: 473
