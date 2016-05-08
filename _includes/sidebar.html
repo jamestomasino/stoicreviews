@@ -5,9 +5,6 @@
 		{% if longpage != page.url %}
 			{% assign counter = counter | plus: 1 %}
 			<section>
-				{% if counter != 1 %}
-				<a href="{{ section.page }}" class="image featured">{% picture {{ section.pic }} %}</a>
-				{% endif %}
 				<header>
 					<h3>{{ section.name }}</h3>
 				</header>
