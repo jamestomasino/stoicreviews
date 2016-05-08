@@ -1,7 +1,6 @@
 #!/bin/sh
 if bundle exec jekyll build; then
-	ssh tomasino rm -rf /var/www/stoicreviews.com/*
-	scp -r _site/. tomasino:/var/www/stoicreviews.com/
+	s3_website push
 else
     echo "Failed to build site. Aborting"
 fi
