@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'jekyll'
+gem 'jekyll-docs'
 gem 'jemoji',  group: [:jekyll_plugins]
 gem 'jekyll-redirect-from',  group: [:jekyll_plugins]
 gem 'jekyll-sitemap',  group: [:jekyll_plugins]
