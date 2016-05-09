@@ -123,6 +123,7 @@ picture:
       source_default:
         width: 473
 
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "s3_website.yml"]
 gems:
 - jekyll-redirect-from
 - jekyll-sitemap
