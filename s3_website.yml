@@ -4,13 +4,13 @@ s3_bucket: stoicreviews.com
 cloudfront_distribution_id: E3NXQH413P5AX0
 
 max_age:
-  "*": <%= 5 * 60 %>
-  "images/*": <%= 24 * 60 * 60 %>
-  "generated/*": <%= 24 * 60 * 60 %>
-  "js/*": <%= 1 * 60 * 60 %>
-  "css/*": <%= 1 * 60 * 60 %>
-  "css/images/*": <%= 24 * 60 * 60 %>
-  "fonts/*": <%= 1 * 60 * 60 %>
+  "*": <%= 7 * 24 * 60 * 60 %>
+  "images/*": <%= 30 * 24 * 60 * 60 %>
+  "generated/*": <%= 30 * 24 * 60 * 60 %>
+  "js/*": <%= 1 * 24 * 60 * 60 %>
+  "css/*": <%= 7 * 24 * 60 * 60 %>
+  "css/images/*": <%= 30 * 24 * 60 * 60 %>
+  "fonts/*": <%= 30 * 24 * 60 * 60 %>
 
 gzip: true
 gzip:
