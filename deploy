@@ -1,6 +1,6 @@
 #!/bin/sh
 if bundle exec jekyll build; then
-	s3_website push
+	s3_website push --config-dir "$HOME/.s3config/stoicreviews.com/"
 else
     echo "Failed to build site. Aborting"
 fi
